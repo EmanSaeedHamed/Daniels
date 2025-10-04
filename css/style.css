@@ -1,0 +1,479 @@
+:root{
+    --main-font: "Montserrat", sans-serif;
+    --second-font: "Poppins", sans-serif;
+    --main-color: #343434;
+    --second-color: #748182;
+    --body-main: #1C1C1C;
+}
+.bg-gray{
+    background-color: #f7f7f7;
+}
+.pb-6{
+    padding-bottom: 4.375rem;
+}
+.pt-7{
+    padding-block: 6.25rem;
+}
+.mb-6{
+    margin-bottom: 5rem;
+}
+.w-85{
+    width: 85%;
+}
+.w-95{
+    width: 95%;
+}
+html{
+    scroll-behavior: smooth;
+}
+a,
+span{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.services h2,
+.clients h2,
+.works h2,
+.team h2,
+.contact h2
+{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    position: relative;
+}
+.services h2::after,
+.clients h2::after,
+.works h2::after,
+.team h2::after,
+.contact h2::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-image: url(../images/dots.png);
+    left: 0;
+    bottom: -10%;
+
+}
+.transition{
+    transition: all 0.5s;
+}
+/* start of navbar */
+.navbar{
+    background-color: #fff;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+.navbar-brand{
+    color: var(--body-main);
+    font-size: 1.125rem;
+    font-weight: 800;
+    letter-spacing: .0625rem;
+    font-family: var(--main-font);
+}
+.navbar .nav-link{
+    font-size: .875rem;
+    font-family: var(--second-font);
+    color: rgb(17, 17, 17);
+    position: relative;
+}
+.navbar .nav-link::after{
+    content: "";
+    position: absolute;
+    height: .125rem;
+    background-color: #222;
+    width: 0;
+    left: 0;
+    bottom: 15%;
+    transition: width 0.5s;
+}
+.navbar .nav-link.active::after{
+    width: 100%;
+}
+.navbar-toggler{
+    border: none;
+}
+[type=button]:not(:disabled){
+    cursor: pointer;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar-toggler i{
+    color: var(--body-main);
+    cursor: pointer;
+}
+/* end of navbar */
+/* start of header */
+.main-header{
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(../images/bg.jpg);
+    background-position: 0px 0px;
+    background-size: cover;
+}
+.header-icon span{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.main-header h3{
+    font-size: 3.125rem;
+    font-weight: 800;
+    font-family: var(--main-font);
+}
+.main-header h1{
+    font-size: 30px;
+    font-weight: 200;
+    font-family: var(--main-font);
+}
+/* end of header */
+/* start of about */
+.about figure::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/dots.png);
+    left: 0;
+    bottom: -1.875rem;
+    width: 85%;
+    height: 80%;
+    z-index: -1;
+}
+.about{
+    padding-inline: 1.875rem;
+}
+.about figure img{
+    margin-left: 1.875rem;
+}
+.about h2{
+    font-size: 1.875rem;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-weight: 800;
+}
+.about h3{
+    font-family: var(--second-font);
+    color: rgb(153, 153, 153);
+    font-size: .875rem;
+    letter-spacing: .125rem;
+}
+.about p{
+    font-family: var(--second-font);
+    font-size: .9375rem;
+    color: var(--second-color);
+}
+.about .progress{
+    height: 1.5625rem;
+    background-color: #F7F7F7;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    margin-top: 1.875rem;
+}
+.about .progress-bar{
+    padding: .3125rem .625rem;
+    background-color: var(--body-main);
+    border-radius: inherit;
+}
+.progress-bar h4 ,
+.progress span{
+    font-size: .8125rem;
+    font-family: var(--main-font);
+}
+.about button:first-child{
+    background-color: var(--body-main);
+    padding: .625rem 1.875rem;
+    color: white;
+    cursor: pointer;
+    font-size: .8125rem;
+    font-family: var(--second-font);
+}
+.about button:first-child:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    border: .0625rem solid var(--body-main);
+}
+.about button:last-child:hover{
+    background-color: var(--body-main);
+    color: white;
+    cursor: pointer;
+}
+.about button:last-child{
+    padding: .625rem 1.875rem;
+    font-size: .8125rem;
+    font-family: var(--second-font);
+    background-color: transparent;
+    color: var(--main-color);
+    border: .0625rem solid var(--body-main);
+}
+/* end of about */
+/* start of Services */
+.services span{
+    width: 4.375rem;
+    height: 4.375rem;
+    background-color: #f4f4f4;
+}
+.services i{
+    color: var(--main-color);
+}
+.services .card-item{
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+.services .card-item:hover span{
+    background-color: var(--body-main);
+}
+.services .card-item:hover i{
+    color: white;
+}
+.services h3{
+    font-family: var(--main-font);
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--main-color);
+}
+.services p{
+    font-family: var(--second-font);
+    font-size: .875rem;
+    color: var(--second-color);
+    line-height: 1.6;
+    word-spacing: .125rem;
+}
+/* end of Services */
+/* start of works */
+.nav-link span{
+    color: var(--main-color);
+    font-family: var(--second-font);
+    cursor: pointer;
+}
+.nav-link span:hover{
+    color: var(--main-color);
+}
+.nav-pills .nav-link.active{
+    background-color: transparent;
+}
+.works .nav-pills .nav-link.active span{
+    color: var(--main-color);
+}
+.works .nav-link span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: .125rem;
+    left: 0;
+    bottom: -20%;
+    background-color: var(--body-main);
+    transition: width 0.4s;
+}
+.works .nav-pills .nav-link.active span::after{
+    width: 95%;
+}
+.works .works-layer{
+    inset: .3125rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transform: translateY(.625rem);
+}
+.works figure:hover .works-layer{
+    opacity: 1;   
+    transform: translateY(0);
+}
+.works .works-layer span{
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: #000;
+    border: .0625rem solid #000;
+}
+.works-layer a i{
+    color: white;
+    font-size: .75rem;
+}
+.works-layer span:hover{
+    background-color: white;
+}
+.works-layer span:hover i{
+    color: #000;
+}
+.works h3{
+    font-family: var(--main-font);
+    font-size: .75rem;
+    color: var(--main-color);
+    letter-spacing: .125rem;
+    transform: translateY(-0.9375rem);
+}
+[type=button]:not(:disabled){
+    cursor: default;
+}
+/* end of works */
+/* start of clients */
+.clients p{
+    font-size: .9375rem;
+    color: var(--second-color);
+    font-family: var(--second-font);
+    word-spacing: .125rem;
+    line-height: 1.6;
+}
+.clients h3{
+    font-family: var(--main-font);
+    color: var(--main-color);
+}
+.works figure:hover h3{
+    opacity: 1;   
+    transform: translateY(0);
+}
+.clients span{
+    color: #888;
+    font-size: .75rem;
+    font-family: var(--second-font);
+}
+.clients img{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+.carousel-indicators [data-bs-target]{
+    width: .625rem;
+    height: .625rem;
+    background-color: #d6d6d6;
+}
+.carousel-indicators [data-bs-target]:hover{
+    background-color: #869791;
+}
+.carousel-indicators [data-bs-target].active{
+    background-color: #869791;
+}
+/* end of clients */
+/* start of numbers */
+.numbers i{
+    color: var(--main-color);
+}
+.numbers h3{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-size: 1.875rem;
+    font-weight: 900;
+}
+.numbers p{
+    font-family: var(--second-font);
+    color: var(--second-color);
+    font-size: .9375rem;
+}
+/* end of numbers */
+/* start of team */
+.team figcaption{
+    background-color: #5B5B5B;
+}
+.team h3{
+    font-family: var(--main-font);
+    font-size: 1.5625rem;
+    line-height: 1.1;
+}
+.team h4{
+    font-family: var(--main-font);
+    line-height: 1.1;
+}
+.team figure:hover img{
+    transform: scale(1.2);
+}
+.team-card-layer{
+    inset: .3125rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: rotateY(180deg) scale(0.5, 0.5);
+    opacity: 0;
+    cursor: pointer;
+}
+.team-card:hover .team-card-layer{
+    transform: rotateY(0);
+    opacity: 1;
+}
+.team-card-layer li{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #000;
+    border: .0625rem solid #000;
+}
+.team-card-layer li i{
+    color: white;
+}
+.team-card-layer li:hover{
+    background-color: white;
+}
+.team-card-layer li:hover i{
+    color: #000;
+}
+/* end of team */
+/* start of contact */
+.contact span{
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: #f4f4f4;
+}
+.contact i{
+    color: var(--main-color);
+}
+.contact .contact-item:hover span{
+    background-color: var(--body-main);
+}
+.contact .contact-item:hover i{
+    color: white;
+}
+.contact h3{
+    font-family: var(--main-font);
+}
+.contact p{
+    font-family: var(--second-font);
+    font-size: .9375rem;
+    color: var(--second-color);
+}
+.contact input ,
+.contact textarea
+{
+    font-family: var(--second-font);
+    font-size: .875rem;
+    color: var(--main-color);
+    background-color: #F4F4F4;
+    padding: .625rem;
+}
+.contact textarea{
+    height: 10rem;
+    max-height: 10rem;
+    max-width: 100%;
+    resize: both;
+}
+.contact .form-control{
+    border: 0;
+}
+.form-control:focus{
+    box-shadow: none;
+    background-color: #F4F4F4;
+}
+.contact button{
+    background-color: var(--body-main);
+    padding: .625rem 2.5rem;
+    color: white;
+    cursor: pointer;
+    font-size: .8125rem;
+    font-family: var(--second-font);
+}
+.contact button:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    border: .0625rem solid var(--body-main);
+}
+/* end of contact */
+/* start of footer */
+footer{
+    background-color: var(--body-main);
+    padding: 30px;
+}
+footer p{
+    font-size: .8125rem;
+    word-spacing: .125rem;
+    line-height: 1.6;
+    color: var(--second-color);
+    font-family: var(--second-font)
+}
+/* end of footer */

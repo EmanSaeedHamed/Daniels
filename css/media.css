@@ -1,0 +1,14 @@
+@media screen and (min-width : 768px) {
+      /* navbar */
+      .navbar .nav-link::after{
+    width: 0;
+    left: 10%;
+}
+.navbar .nav-link.active::after{
+    width: 80%;
+}
+/* header */
+.main-header h1{
+    font-size: 3.75rem;
+}
+}
